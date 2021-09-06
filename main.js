@@ -31,12 +31,6 @@ function changeHeaderWhenScroll(){
   }
 }
 
-
-
-
-
-
-
 /*Testimonials carousel slider swiper*/
 
 const swiper = new Swiper('.swiper', {
