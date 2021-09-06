@@ -18,11 +18,10 @@ for (const element of links) {
 }
 
 /* mudar o header da pagina quando der scroll */
+function changeHeaderWhenScroll(){
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function () {
   if (window.scrollY >= navHeight) {
     //scroll maior que a altura do header para
     header.classList.add('scroll')
@@ -30,7 +29,12 @@ window.addEventListener('scroll', function () {
     //scroll menor que a altura do header
     header.classList.remove('scroll')
   }
-})
+}
+
+
+
+
+
 
 
 /*Testimonials carousel slider swiper*/
@@ -57,4 +61,23 @@ scrollReveal.reveal(`#home .image, #home .text,
 #about .image, #about .text,
 #services header, #services card,
 #testimonials header, #testimonials .testimonials,
-#contact .text, #contact .links`, { interval:100 })
+#contact .text, #contact .links,
+footer .brand, footer .social`, { interval:100 })
+
+
+
+/*BOTÃO VOLTAR PARA O TOPO*/
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+  if(window.scrollY >= 560){
+    backToTopButton.classList.add('show')
+  }else{
+    backToTopButton.classList.remove('show')
+  }
+}
+
+
+window.addEventListener('scroll', function () {
+ changeHeaderWhenScroll()
+ backToTop()
+})
