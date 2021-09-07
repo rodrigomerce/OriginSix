@@ -5,3 +5,6 @@ https://unsplash.com/
 https://swiperjs.com/get-started -> para montar os sliders
 
 https://scrollrevealjs.org/guide/hello-world.html -> efeito scrollrevealjs
+
+
+parei em 30:51
